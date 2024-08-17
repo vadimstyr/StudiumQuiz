@@ -1,0 +1,313 @@
+body,ul,li {
+    font-size: 16px;
+}
+
+/* Styles für Bildschirme ab 600px Breite */
+@media screen and (min-width: 600px) {
+    body {
+        font-size: 18px;
+    }
+}
+
+/* Styles für Bildschirme ab 1200px Breite */
+@media screen and (min-width: 1200px) {
+    body {
+        font-size: 20px;
+    }
+}
+
+
+.navigation {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    background-color: black;
+}
+
+.navigation li {
+    margin: 0 15px;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: aquamarine;
+    font-weight: bold;
+}
+
+.navigation a:hover {
+    color: green;
+}
+
+.logo {
+    display: block;
+    max-width: 100px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    animation: rotatelogo 10s infinite alternate;
+}
+
+#TitelUeberMich {
+    text-align: center;
+    font-size: clamp(40px, 10vw, 200px);
+    font-weight: bold;
+    margin-top: 10vh;
+  }
+
+/* Styles für Tablets */
+@media screen and (max-width: 1024px) {
+
+}
+
+/* Styles für Handys */
+@media screen and (max-width: 600px) {
+    #TitelUeberMich {
+        font-size: 5em;
+        top: -50px;
+    }
+}
+
+#Beschreibung {
+    text-align: center;
+}
+
+.Projekte {
+    max-width: 450px;
+}
+
+.Lebenslauf {
+    max-width: 450px;
+}
+
+.KontaktVerlinkung {
+    max-width: 450px;
+    top: 20px;
+}
+
+@keyframes rotatelogo {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(-20deg);
+    }
+
+    100% {
+        transform: rotate(20deg);
+    }
+}
+
+.vertical-line {
+    position: absolute;
+    height: 1600px;
+    margin-top: 50px;
+    content: '';
+    left: 50%;
+    width: 5px;
+    background-color: black;
+    transform: translateX(-50%);
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Zentriere die Elemente horizontal */
+    margin-top: 10%;
+}
+  
+.timeline-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    position: relative;
+}
+  
+.bubble {
+    width: 20px;
+    height: 20px;
+    top: -1px;
+    background-color: green;
+    border: 2px solid black;
+    border-radius: 50%;
+    position: absolute;
+    left: calc(50% - 10px); /* Zentriere den Bubble über der Linie */
+    margin-right: 5px;
+}
+  
+.content {
+    display: flex;
+    flex-direction: column;
+    margin-left: 70%;
+}
+
+.date-range {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.title {
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: clamp(10px, 10vw, 20px);
+}
+
+.description {
+    max-width: 850px;
+    font-size: clamp(5px, 10vw, 20px);
+    word-break: normal;
+
+}
+h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+}
+
+.container-two{
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Zentriere die Elemente horizontal */
+    margin-top: 10%;
+}
+  
+.timeline-item-two{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    position: relative;
+}
+  
+.bubble-two {
+    width: 20px;
+    height: 20px;
+    background-color: green;
+    border: 2px solid black;
+    border-radius: 50%;
+    position: absolute;
+    left: calc(50% - 10px); /* Zentriere den Bubble über der Linie */
+    margin-right: 5px;
+}
+  
+.content-two {
+    display: flex;
+    flex-direction: column;
+    margin-right: 70%;
+}
+
+.date-range-two {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.title-two {
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: clamp(10px, 10vw, 20px);
+}
+
+.description-two {
+    max-width: 850px;
+    word-break: normal;
+}
+.container-three{
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Zentriere die Elemente horizontal */
+    margin-top: 10%;
+}
+  
+.timeline-item-three{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    position: relative;
+}
+  
+.bubble-three {
+    width: 20px;
+    height: 20px;
+    background-color: green;
+    border: 2px solid black;
+    border-radius: 50%;
+    position: absolute;
+    left: calc(50% - 10px); /* Zentriere den Bubble über der Linie */
+    margin-right: 5px;
+    top: -1px;
+}
+  
+.content-three {
+    display: flex;
+    flex-direction: column;
+    margin-left: 70%;
+}
+
+.date-range-three {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.title-three {
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: clamp(10px, 10vw, 20px);
+}
+
+.description-three {
+    max-width: 850px;
+    word-break: normal;
+}
+.container-four{
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Zentriere die Elemente horizontal */
+    margin-top: 10%;
+}
+  
+.timeline-item-four{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    position: relative;
+}
+  
+.bubble-four {
+    width: 20px;
+    height: 20px;
+    background-color: green;
+    border: 2px solid black;
+    border-radius: 50%;
+    position: absolute;
+    left: calc(50% - 10px); /* Zentriere den Bubble über der Linie */
+    margin-right: 5px;
+    top: -1px;
+}
+  
+.content-four {
+    display: flex;
+    flex-direction: column;
+    margin-right: 70%;
+}
+
+.date-range-four {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.title-four {
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: clamp(10px, 10vw, 20px);
+}
+
+.description-four {
+    max-width: 850px;
+    word-break: normal;
+}
