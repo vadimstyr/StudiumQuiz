@@ -1,27 +1,18 @@
 body,ul,li {
-    font-size: 16px;
+    font-size: 20px;
 }
-
-/* Styles für Bildschirme ab 600px Breite */
-@media screen and (min-width: 600px) {
-    body {
-        font-size: 18px;
-    }
+.LifeIsGoodBigSize {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    margin-bottom: -20px;
 }
-
-/* Styles für Bildschirme ab 1200px Breite */
-@media screen and (min-width: 1200px) {
-    body {
-        font-size: 20px;
-    }
-}
-
-
 .navigation {
     display: flex;
     justify-content: space-around;
-    padding: 20px;
-    background-color: black;
+    padding: 10px;
+    background-color: rgb(0, 0, 0);
 }
 
 .navigation li {
@@ -30,7 +21,7 @@ body,ul,li {
 
 .navigation a {
     text-decoration: none;
-    color: aquamarine;
+    color: rgb(255, 255, 255);
     font-weight: bold;
 }
 
@@ -49,23 +40,13 @@ body,ul,li {
 
 #TitelUeberMich {
     text-align: center;
-    font-size: clamp(40px, 10vw, 200px);
     font-weight: bold;
     margin-top: 10vh;
+    background: linear-gradient(to right, rgb(171, 171, 5) 50%, black 50%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: clamp(50px,5vw,90px);
   }
-
-/* Styles für Tablets */
-@media screen and (max-width: 1024px) {
-
-}
-
-/* Styles für Handys */
-@media screen and (max-width: 600px) {
-    #TitelUeberMich {
-        font-size: 5em;
-        top: -50px;
-    }
-}
 
 #Beschreibung {
     text-align: center;
@@ -129,7 +110,7 @@ body,ul,li {
     width: 20px;
     height: 20px;
     top: -1px;
-    background-color: green;
+    background-color: rgb(255, 247, 0);
     border: 2px solid black;
     border-radius: 50%;
     position: absolute;
@@ -146,17 +127,18 @@ body,ul,li {
 .date-range {
     font-weight: bold;
     margin-bottom: 5px;
+    font-size: clamp(15px,1vw,45px);
 }
 
 .title {
     font-weight: bold;
     margin-bottom: 5px;
-    font-size: clamp(10px, 10vw, 20px);
+    font-size: clamp(15px, 1vw, 30px);
 }
 
 .description {
     max-width: 850px;
-    font-size: clamp(5px, 10vw, 20px);
+    font-size: clamp(15px, 1vw, 20px);
     word-break: normal;
 
 }
@@ -184,7 +166,7 @@ h1, h2, h3, p {
 .bubble-two {
     width: 20px;
     height: 20px;
-    background-color: green;
+    background-color: rgb(255, 247, 0);
     border: 2px solid black;
     border-radius: 50%;
     position: absolute;
@@ -201,17 +183,19 @@ h1, h2, h3, p {
 .date-range-two {
     font-weight: bold;
     margin-bottom: 5px;
+    font-size: clamp(15px,1vw,45px);
 }
 
 .title-two {
     font-weight: bold;
     margin-bottom: 5px;
-    font-size: clamp(10px, 10vw, 20px);
+    font-size: clamp(15px, 1vw, 30px);
 }
 
 .description-two {
     max-width: 850px;
     word-break: normal;
+    font-size: clamp(15px, 1vw, 20px);
 }
 .container-three{
     position: relative;
@@ -232,7 +216,7 @@ h1, h2, h3, p {
 .bubble-three {
     width: 20px;
     height: 20px;
-    background-color: green;
+    background-color: rgb(255, 247, 0);
     border: 2px solid black;
     border-radius: 50%;
     position: absolute;
@@ -250,17 +234,19 @@ h1, h2, h3, p {
 .date-range-three {
     font-weight: bold;
     margin-bottom: 5px;
+    font-size: clamp(15px,1vw,45px);
 }
 
 .title-three {
     font-weight: bold;
     margin-bottom: 5px;
-    font-size: clamp(10px, 10vw, 20px);
+    font-size: clamp(15px, 1vw, 30px);
 }
 
 .description-three {
     max-width: 850px;
     word-break: normal;
+    font-size: clamp(15px, 1vw, 20px);
 }
 .container-four{
     position: relative;
@@ -281,7 +267,7 @@ h1, h2, h3, p {
 .bubble-four {
     width: 20px;
     height: 20px;
-    background-color: green;
+    background-color: rgb(255, 247, 0);
     border: 2px solid black;
     border-radius: 50%;
     position: absolute;
@@ -299,15 +285,68 @@ h1, h2, h3, p {
 .date-range-four {
     font-weight: bold;
     margin-bottom: 5px;
+    font-size: clamp(15px,1vw,45px);
 }
 
 .title-four {
     font-weight: bold;
     margin-bottom: 5px;
-    font-size: clamp(10px, 10vw, 20px);
+    font-size: clamp(15px, 1vw, 30px);
 }
 
 .description-four {
     max-width: 850px;
     word-break: normal;
+    font-size: clamp(15px, 1vw, 20px);
+}
+
+.container-five{
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Zentriere die Elemente horizontal */
+    margin-top: 10%;
+}
+  
+.timeline-item-five{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    position: relative;
+}
+  
+.bubble-five{
+    width: 20px;
+    height: 20px;
+    background-color: rgb(255, 247, 0);
+    border: 2px solid black;
+    border-radius: 50%;
+    position: absolute;
+    left: calc(50% - 10px); /* Zentriere den Bubble über der Linie */
+    margin-right: 5px;
+}
+  
+.content-five{
+    display: flex;
+    flex-direction: column;
+    margin-right: 70%;
+}
+
+.date-range-five{
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: clamp(15px,1vw,45px);
+}
+
+.title-five{
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: clamp(15px, 1vw, 30px);
+}
+
+.description-five{
+    max-width: 850px;
+    word-break: normal;
+    font-size: clamp(15px, 1vw, 20px);
 }
