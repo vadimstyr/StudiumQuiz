@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="icon" type="image/x-icon" href="IU-Logo.png">
+    <link rel="stylesheet" href="quiz.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Flexbox-Kinder -->
+        <div class="header">
+            <div class="logoContainer">
+                <img src="./picture/IU-Logo.svg" alt="IU-Logo" id="logoPicture">
+            </div>
+            <div class="login">
+                <a href="usernameLogin.html" id="loginButton" class="loginUsername">Login</a>
+            </div>
+        </div>
+
+        <div class="containerQuiz">
+            <div class="quiz">
+                <h1>Quiz</h1>
+            </div>
+            <div class="quizzQuestion">
+                <h2 id="currentQuestion">Hier steht später die Frage!!</h2>
+            </div>
+        </div>
+        <div class="answer-container">
+            <div class="answer" id="A">A: Indonesian</div>
+            <div class="answer" id="B">B: Thailand</div>
+            <div class="answer" id="C">C: Arab Saudi</div>
+            <div class="answer" id="D">D: Malaysia</div>
+        </div>
+        <main>
+            <p>Füge bitte eine Frage und vier Antwortmöglichkeiten in die entsprechenden Felder ein.</p>
+        </main>
+    </div>
+
+    <script src="quiz.js"></script>
+</body>
+
+</html>
