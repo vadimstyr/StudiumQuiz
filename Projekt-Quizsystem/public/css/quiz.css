@@ -1,0 +1,551 @@
+/* Hauptcontainer */
+.container {
+    background-color: #f3ccb5; /* Hintergrundfarbe */
+    padding: 20px; /* Innenabstand */
+    border-radius: 10px; /* Runde Ecken */
+    width: 100%; /* Volle Breite */
+    max-width: 800px; /* Begrenzte maximale Breite */
+    margin: 0 auto; /* Zentriert den Container horizontal */
+}
+.answer {
+    flex-basis: calc(50% - 10px);
+    flex-grow: 0;
+    flex-shrink: 0;
+    background-color: #ffd27f;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.answer.correct {
+    background-color: #4CAF50;
+    color: white;
+    box-shadow: 0 0 10px #4CAF50;
+}
+
+.answer.incorrect {
+    background-color: #f44336;
+    color: white;
+    box-shadow: 0 0 10px #f44336;
+}
+.answer:hover {
+    background-color: #ffbe4d;
+}
+/* Header (Logo + Login) */
+.header {
+    display: flex; /* Flexbox aktivieren */
+    justify-content: space-between; /* Logo links, Login rechts */
+    align-items: center; /* Vertikal zentriert */
+    width: 100%; /* Volle Breite */
+}
+.Registrieren {
+    text-align: center;
+    color: black; /* Textfarbe */
+    padding: 10px 15px; /* Innenabstand */
+    border-radius: 5px; /* Runde Ecken */
+    cursor: pointer; /* Hand-Cursor bei Hover */
+    font-size: 25px;
+    font-weight: bold;
+    text-decoration: none; /* <- fehlendes Semikolon hinzugefügt */
+}
+.anmelden {
+    text-align: center;
+    color: black; /* Textfarbe */
+    padding: 10px 15px; /* Innenabstand */
+    border-radius: 5px; /* Runde Ecken */
+    cursor: pointer; /* Hand-Cursor bei Hover */
+    font-size: 25px;
+    font-weight: bold;
+    text-decoration: none; /* <- fehlendes Semikolon hinzugefügt */
+}
+
+#logoPicture {
+    width: 60px; /* Breite des Logos */
+    height: auto; /* Seitenverhältnis bleibt erhalten */
+}
+
+#loginButton,#backButton,#username,#registerButton,#anmeldenButton {
+    background-color: #ffa600; /* Hintergrundfarbe */
+    color: black; /* Textfarbe */
+    border: none; /* Kein Rahmen */
+    padding: 10px 15px; /* Innenabstand */
+    border-radius: 5px; /* Runde Ecken */
+    cursor: pointer; /* Hand-Cursor bei Hover */
+    font-size: 25px;
+    font-weight: bold;
+}
+.button-Quiz-next-back {
+    display: flex; /* Flexbox aktivieren */
+    justify-content: center; /* Button Links, Button rechts */
+    align-items: center; /* Vertikal zentriert */
+    width: 100%; /* Volle Breite */
+    gap: 40px;
+}
+#next-button,#back-button, #delete-button {
+    background-color: #ffa600; /* Hintergrundfarbe */
+    color: black; /* Textfarbe */
+    border: none; /* Kein Rahmen */
+    padding: 10px 15px; /* Innenabstand */
+    border-radius: 5px; /* Runde Ecken */
+    cursor: pointer; /* Hand-Cursor bei Hover */
+    font-size: 25px;
+    font-weight: bold;
+    text-decoration: none
+}
+
+/* Quiz-Bereich */
+.containerQuiz {
+    margin-top: 20px; /* Abstand zum Header */
+    padding: 20px; /* Innenabstand */
+    border-radius: 10px; /* Runde Ecken */
+    text-align: center; /* Zentrierter Text */
+}
+
+.quiz h1 {
+    width: 40%; /* Breite des H1-Elements */
+    margin: 0 auto; /* Zentriert horizontal - wird gebraucht um die Zentrierung links zu entfernen. */
+    font-size: 35px; /* Schriftgröße */
+    border-radius: 10px; /* Runde Ecken */
+    background-color: #ff5e00; /* Hintergrundfarbe */
+    color: #000; /* Textfarbe */
+    padding: 10px 20px; /* Innenabstand */
+    text-align: center; /* Zentriert den Text */
+    margin-bottom: 20px ;
+}
+.username,.passwort-1, .passwort-2 {
+    width: 30%; /* Breite des H1-Elements */
+    margin: 0 auto; /* Zentriert horizontal - wird gebraucht um die Zentrierung links zu entfernen. */
+    font-size: 20px; /* Schriftgröße */
+    border-radius: 10px; /* Runde Ecken */
+    background-color: #ff5e00; /* Hintergrundfarbe */
+    color: #000; /* Textfarbe */
+    padding: 5px; /* Innenabstand */
+    text-align: center; /* Zentriert den Text */
+    margin-bottom: 20px ;
+    margin-top: 30px;
+    border: none; /* Entfernt den Standardrahmen */
+    cursor: pointer;
+}
+.quiz-qerwaltung {
+    width: 40%; /* Breite des H1-Elements */
+    margin: 0 auto; /* Zentriert horizontal - wird gebraucht um die Zentrierung links zu entfernen. */
+    font-size: 15px; /* Schriftgröße */
+    border-radius: 10px; /* Runde Ecken */
+    background-color: #ff5e00; /* Hintergrundfarbe */
+    color: #000; /* Textfarbe */
+    padding: 10px 20px; /* Innenabstand */
+    text-align: center; /* Zentriert den Text */
+    margin-bottom: 20px ;
+}
+
+.quizzQuestion h2 {
+    width: 80%; /* Breite des H1-Elements */
+    margin: 0 auto; /* Zentriert horizontal - wird gebraucht um die Zentrierung links zu entfernen. */
+    font-size: 25px;
+    background-color: #ffd27f;
+    padding: 20px 20px;
+    text-align: center;
+    border-radius: 10px
+}
+
+/* Antworten Container */
+.answer-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+/* Antwort Boxen */
+.answer {
+    flex-basis: calc(50% - 10px); /* Genau 50% minus der Hälfte des Gaps */
+    flex-grow: 0; /* Verhindert das Wachsen */
+    flex-shrink: 0; /* Verhindert das Schrumpfen */
+    background-color: #ffd27f;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    box-sizing: border-box; /* Wichtig für die Berechnung der Gesamtbreite */
+}
+
+/* Optional: Hover-Effekt */
+.answer:hover {
+    background-color: #ffbe4d;
+    transition: background-color 0.3s ease;
+}
+
+/* Für bessere Mobile Ansicht */
+@media (max-width: 600px) {
+    .answer-1, .answer-2, .answer-3, .answer-4 {
+        flex-basis: 100%;
+    }
+}
+p {
+    color: red;
+    font-weight: bold; /* Richtiges Attribut */
+    text-align: center;
+    font-size: 25px;
+}
+a {
+    text-decoration: none;  /* entfernt die Unterstreichung */
+    color: inherit;        /* übernimmt die Farbe des Elternelements */
+}
+/* Base Styles */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.nav-button {
+    background-color: #ffa600;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+.nav-buttons {
+    display: flex;
+    gap: 20px;
+}
+.nav-button:hover {
+    background-color: #ff8c00;
+}
+
+.user-email {
+    font-weight: bold;
+}
+
+/* Section Styles */
+.section-title {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Input Styles */
+.input-group {
+    margin-bottom: 20px;
+}
+
+.text-input {
+    width: calc(100% - 24px); /* Verhindert, dass Inputs zu breit werden */
+    padding: 12px;
+    border: 2px solid #ffa600;
+    border-radius: 8px;
+    font-size: 16px;
+    margin-top: 8px;
+}
+.question-input {
+    margin-bottom: 30px; /* Mehr Abstand nach der Frage */
+ }
+
+.answers-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px; /* Erhöhter Abstand zwischen den Antworten */
+    margin: 30px 0; /* Mehr vertikaler Abstand */
+    padding: 0 20px; /* Abstand von den Rändern */
+ }
+ 
+ .answer-input {
+    margin-bottom: 25px; /* Mehr Abstand nach unten */
+ }
+
+.select-input {
+    padding: 12px;
+    border: 2px solid #ffa600;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: white;
+    cursor: pointer;
+}
+
+/* Button Styles */
+.primary-button {
+    background-color: #4CAF50;
+    color: white;
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 40px; /* Mehr Abstand vor dem Speichern-Button */
+}
+
+.danger-button {
+    background-color: #f44336;
+    color: white;
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+/* Preview Section */
+.preview-card {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    margin: 30px 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.preview-answers {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-top: 15px;
+    padding: 20px;
+}
+
+.correct-answer-display {
+    color: #4CAF50;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+/* Navigation */
+.navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.question-counter {
+    font-weight: bold;
+}
+/* Nächste Frage Button Styling */
+.next-button {
+    background-color: #ffa600;
+    color: black;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+ }
+ 
+ .next-button:hover {
+    background-color: #ff8c00;
+    transform: translateY(-2px);
+ }
+ 
+ /* Quiz Ende Container */
+ .quiz-end {
+    background-color: #fff3e6;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    margin-top: 30px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+ }
+ 
+ .quiz-end h2 {
+    color: #333;
+    margin-bottom: 20px;
+ }
+ 
+ .quiz-score {
+    font-size: 24px;
+    color: #ffa600;
+    font-weight: bold;
+    margin: 20px 0;
+ }
+ .quiz-end {
+    .quiz-end {
+        background-color: #fff3e6;
+        padding: 30px;
+        border-radius: 15px;
+        text-align: center;
+        margin: 50px auto;  /* Vergrößerter oberer Margin */
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        position: relative;
+        width: 80%;
+        max-width: 600px;
+        transform: none;  /* Entferne die Transform */
+        top: auto;       /* Entferne die Top-Position */
+        left: auto;      /* Entferne die Left-Position */
+    }
+}
+.quiz-result-title {
+    width: 40%;
+    margin: 0 auto;
+    font-size: 35px;
+    border-radius: 10px;
+    background-color: #ff5e00;
+    color: #000;
+    padding: 10px 20px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.quiz-result {
+    width: 80%;
+    margin: 0 auto;
+    font-size: 25px;
+    background-color: #ffd27f;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.restart-button {
+    background-color: #ffa600;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 25px;
+    font-weight: bold;
+    display: block;
+    margin: 20px auto;
+}
+
+.restart-button:hover {
+    background-color: #ff8c00;
+}
+.quiz-buttons, .mode-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.quiz-button, .mode-button {
+    background-color: #ffa600;
+    color: black;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    min-width: 250px;
+    text-align: center;
+}
+
+.quiz-button:hover, .mode-button:hover {
+    background-color: #ff8c00;
+}
+
+.mode-button {
+    font-size: 24px;
+    padding: 20px 40px;
+    min-width: 300px;
+}
+.leaderboard {
+    background-color: #fff3e6;
+    border-radius: 15px;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.leaderboard h2 {
+    color: #ff5e00;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.leaderboard-entry {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #ffd27f;
+    margin: 5px 0;
+    border-radius: 8px;
+}
+
+.quiz-info {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    padding: 10px;
+    background-color: #ffd27f;
+    border-radius: 8px;
+    font-weight: bold;
+}
+#playerInfo, #questionCounter, #score {
+    font-weight: bold;
+}
+
+.rank {
+    font-weight: bold;
+    color: #ff5e00;
+}
+
+.player {
+    flex-grow: 1;
+    margin: 0 15px;
+}
+
+.score {
+    font-weight: bold;
+}
+.leaderboard {
+    background-color: #ffd27f;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.highscore-entry {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin: 5px 0;
+    background-color: #fff3e6;
+    border-radius: 5px;
+}
+
+.rank {
+    font-weight: bold;
+    color: #ff5e00;
+    width: 30px;
+}
+
+.player {
+    flex-grow: 1;
+    padding: 0 20px;
+}
+
+.score {
+    font-weight: bold;
+    color: #ff5e00;
+}

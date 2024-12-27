@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Quiz-Verwaltung</title>
+   <link rel="stylesheet" href="/css/quiz.css">
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+   <div class="container">
+       <div class="header">
+           <a href="/html/quiz.html" class="nav-button">Startseite</a>
+           <span id="userEmail" class="user-email"></span>
+       </div>
+
+       <div class="quiz-creation">
+           <h2 class="section-title">Quiz-Frage erstellen (<span id="questionCount">0</span>/10)</h2>
+           
+           <div class="input-group">
+               <label class="input-label">
+                   Frage:
+                   <input type="text" id="questionInput" class="text-input" required>
+               </label>
+           </div>
+           
+           <div class="answers-grid">
+               <div class="answer-input">
+                   <label>Antwort A:
+                       <input type="text" id="answerA" class="text-input" required>
+                   </label>
+               </div>
+               <div class="answer-input">
+                   <label>Antwort B:
+                       <input type="text" id="answerB" class="text-input" required>
+                   </label>
+               </div>
+               <div class="answer-input">
+                   <label>Antwort C:
+                       <input type="text" id="answerC" class="text-input" required>
+                   </label>
+               </div>
+               <div class="answer-input">
+                   <label>Antwort D:
+                       <input type="text" id="answerD" class="text-input" required>
+                   </label>
+               </div>
+           </div>
+           
+           <div class="correct-answer">
+               <label>
+                   Richtige Antwort:
+                   <select id="correctAnswer" class="select-input">
+                       <option value="A">A</option>
+                       <option value="B">B</option>
+                       <option value="C">C</option>
+                       <option value="D">D</option>
+                   </select>
+               </label>
+           </div>
+
+           <button id="saveQuestion" class="primary-button">Frage speichern</button>
+       </div>
+
+       <div class="quiz-preview">
+           <h2 class="section-title">Vorschau und Bearbeitung</h2>
+           
+           <div class="navigation">
+               <button id="prevQuestion" class="nav-button">←</button>
+               <span id="currentQuestionNumber" class="question-counter">Frage 0/0</span>
+               <button id="nextQuestion" class="nav-button">→</button>
+           </div>
+           
+           <div class="preview-card">
+               <h3 id="previewQuestion" class="preview-question"></h3>
+               <div id="previewAnswers" class="preview-answers"></div>
+               <p id="correctAnswerDisplay" class="correct-answer-display"></p>
+           </div>
+           
+           <button id="deleteQuestion" class="danger-button">Frage löschen</button>
+       </div>
+   </div>
+
+   <script src="/js/quizManager.js"></script>
+</body>
+</html>

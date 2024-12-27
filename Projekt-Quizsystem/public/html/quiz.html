@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="icon" type="image/x-icon" href="/picture/IU-Logo.svg">
+    <link rel="stylesheet" href="/css/quiz.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Header-Bereich -->
+        <div class="header">
+            <div class="logo">
+                <img src="/picture/IU-Logo.svg" width="45" height="45" alt="IU Logo">
+            </div>
+            <div class="nav-buttons">
+                <a href="/html/quizMode.html" id="modeButton" class="nav-button">Spielmodus</a>
+                <a href="/html/userName.html" id="loginButton" class="nav-button">Benutzer</a>
+            </div>
+        </div>
+
+        <!-- Quiz-Bereich -->
+        <div class="quiz-container">
+            <div class="quiz">
+                <h1>Quiz</h1>
+            </div>
+            <div class="question-container">
+                <h2 id="currentQuestion" data-index="0">Hier steht später die Frage!!</h2>
+            </div>
+
+            <!-- Antwort-Container -->
+            <div class="answer-container">
+                <div class="answer" id="A">A:</div>
+                <div class="answer" id="B">B:</div>
+                <div class="answer" id="C">C:</div>
+                <div class="answer" id="D">D:</div>
+            </div>
+
+            <!-- Button für nächste Frage -->
+            <div class="navigation">
+                <button id="nextQuestion" class="next-button">Nächste Frage</button>
+            </div>
+        </div>
+
+        <main>
+            <p>Bitte Registrieren - Anmelden, bevor du mit dem Quiz Anfangen kannst.</p>
+        </main>
+    </div>
+
+    <script src="/js/quiz.js"></script>
+</body>
+</html>

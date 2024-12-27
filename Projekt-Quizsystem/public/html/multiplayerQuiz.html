@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz - Multiplayer</title>
+    <link rel="stylesheet" href="/css/quiz.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                <img src="/picture/IU-Logo.svg" width="45" height="45" alt="IU Logo">
+            </div>
+            <a href="/html/userName.html" id="loginButton" class="loginUsername">Benutzer</a>
+        </div>
+
+        <div class="quiz">
+            <h1>Multiplayer Quiz</h1>
+        </div>
+
+        <div class="leaderboard">
+            <h2>Bestenliste</h2>
+            <div id="leaderboardList"></div>
+        </div>
+
+        <div class="quiz-container">
+            <div class="question-container">
+                <h2 id="currentQuestion"></h2>
+            </div>
+
+            <div class="answer-container">
+                <div class="answer" id="A"></div>
+                <div class="answer" id="B"></div>
+                <div class="answer" id="C"></div>
+                <div class="answer" id="D"></div>
+            </div>
+
+            <div class="quiz-info">
+                <span id="playerInfo"></span>
+                <span id="questionCounter"></span>
+                <span id="score">Punkte: 0</span>
+            </div>
+
+            <button id="nextQuestion" class="next-button">Nächste Frage</button>
+        </div>
+    </div>
+
+    <script src="/js/multiplayerQuiz.js"></script>
+</body>
+</html>
