@@ -1,6 +1,5 @@
 {
   "dependencies": {
-<<<<<<< HEAD
     "@azure/identity": "^4.5.0",
     "@azure/keyvault-secrets": "^4.9.0",
     "bcrypt": "^5.1.1",
@@ -21,8 +20,4 @@
   "keywords": [],
   "author": "",
   "license": "ISC"
-=======
-    "express-session": "^1.18.1"
-  }
->>>>>>> 93cbe2df97368419acd2121f0febc79f8e7770fb
 }
